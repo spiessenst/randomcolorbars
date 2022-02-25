@@ -26,6 +26,7 @@ class Tile {
 
   animate() {
     this.htmlRef.style.height = getRandomInRange(200, 600) + "px";
+    holder.style.backgroundColor = this.color;
   }
 }
 
@@ -42,23 +43,20 @@ holder.onclick = (e) => {
     }
   }
 };
-let click = true;
+
 let int;
+
 button.onclick = () => {
-  AllTiles.forEach((tile) => {
-    tile.animate();
-  });
-  if (click) {
-    int = setInterval(function () {
-      AllTiles.forEach((tile) => {
-        tile.animate();
-      });
-    }, 400);
-    click = false;
-  } else {
-    clearInterval(int);
-    click = true;
-  }
+  let i = 0;
+  int = setInterval(function () {
+    if (i < AllTiles.length) {
+      AllTiles[i].animate();
+      i++;
+    } else {
+      i = 0;
+      clearInterval(int);
+    }
+  }, 500);
 };
 
 function getRandomName() {
