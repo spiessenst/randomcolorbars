@@ -45,12 +45,15 @@ holder.onclick = (e) => {
 let click = true;
 let int;
 button.onclick = () => {
+  AllTiles.forEach((tile) => {
+    tile.animate();
+  });
   if (click) {
     int = setInterval(function () {
       AllTiles.forEach((tile) => {
         tile.animate();
       });
-    }, 350);
+    }, 400);
     click = false;
   } else {
     clearInterval(int);

@@ -152,7 +152,7 @@ body .tile {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px 0px;
-  transition: height 0.4s ease;
+  transition: height 0.4s ease-in-out;
 }
 body button {
   display: none;
