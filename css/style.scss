@@ -1,0 +1,39 @@
+@use "./base/reset";
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 100vh;
+  transition: background-color 1s ease;
+  cursor: pointer;
+
+  .tile {
+    width: 70px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px 0px;
+    transition: height 0.4s ease;
+  }
+
+  button {
+    display: none;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    &:before {
+      content: ">";
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: coral;
+    }
+  }
+}
