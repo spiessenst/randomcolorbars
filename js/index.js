@@ -44,9 +44,8 @@ holder.onclick = (e) => {
   }
 };
 
-let int;
-
 button.onclick = () => {
+  let int;
   let i = 0;
   int = setInterval(function () {
     if (i < AllTiles.length) {
